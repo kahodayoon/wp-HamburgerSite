@@ -1,0 +1,79 @@
+@use '../../foundation/base' as *;
+//コンテンツ
+.p-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-size: cover;
+}
+//TakeOutの背景
+.p-section--TakeOut {
+  @extend .p-section;
+  background-image: url(../../../img/TakeOut.jpg);
+  margin-bottom: 15px;
+  @include tab {
+    margin-bottom: 0;
+    width: 50%;
+  }
+}
+//EatInの背景
+.p-section--EatIn {
+  @extend .p-section;
+  background-image: url(../../../img/EatIn.jpg);
+  @include tab {
+    width: 50%;
+  }
+}
+
+//section共通のフォント
+.p-section__title-font {
+  font-size: 4rem;
+  font-weight: bold;
+  padding: 15px;
+  color: #fafafa;
+  @include tab {
+    font-size: 4.4rem;
+  }
+  @include pc {
+    font-size: 8rem;
+  }
+}
+.p-section__border {
+  content: ' ';
+  width: 34px;
+  height: 4px;
+  background-color: #fff;
+  margin-left: 15px;
+}
+.p-section__sub-font {
+  color: #3c2a10;
+  font-size: 2.2rem;
+  font-weight: bold;
+  padding: 15px 15px 0 15px;
+}
+.p-section__text-font {
+  color: #3c2a10;
+  font-size: 1.6rem;
+  padding: 15px;
+}
+
+//section共通のテキストボックス
+.p-section__box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-top: 200px;
+  padding-bottom: 5%;
+  @include tab {
+    padding-top: 250px;
+  }
+  @include pc {
+    padding-top: 660px;
+  }
+}
+.p-section__box1,
+.p-section__box2 {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 90%;
+  margin: 0 auto;
+}

@@ -1,0 +1,36 @@
+@use '../../foundation/base' as *;
+//ヘッダー直下のアーカイブビジュアル
+.p-archive-visual {
+  background-image: url(../../../../img/archive-visual.jpg);
+  background-size: cover;
+  background-position: center;
+  @include tab {
+    background-image: url(../../../img/archive-visual-pc.jpg);
+  }
+  @include pc {
+    height: 200px;
+  }
+}
+.p-archive-visual__layer {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.p-archive-visual__text {
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  @include tab {
+    padding: 0 10%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .c-main-font--archive-large { //修正後にクラス名を変更している。
+    padding-bottom: 12px;
+    @include tab {
+      padding-bottom:0 ;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+@use '../../foundation/base' as *;
+//シングル、ショップページのいろんなタイトル
+.c-title-sub {
+  font-weight: bold;
+  font-family: $font-jp
+}
+.c-title-sub--h3 {
+  @extend .c-title-sub;
+  font-size: 2.4rem;
+  @include tab {
+    font-size: 2.8rem;
+  }
+}
+.c-title-sub--h4 {
+  @extend .c-title-sub;
+  font-size: 2rem;
+  @include tab {
+    font-size: 2.4rem;
+  }
+}
+.c-title-sub--h5 {
+  @extend .c-title-sub;
+  font-size: 2rem;
+  @include tab {
+    font-size: 2.4rem;
+  }
+}
+.c-title-sub--h6 {
+  @extend .c-title-sub;
+  font-size: 2rem;
+  @include tab {
+    font-size: 2.4rem;
+  }
+}

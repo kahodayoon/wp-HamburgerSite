@@ -1,0 +1,80 @@
+@use '../../foundation/base' as *;
+.p-archive-menu-main {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.p-archive-menu__image {
+  width: 100%;
+  object-fit: cover;
+  // object-position: left;
+  @include tab {
+    width: 50%;
+  }
+}
+
+//茶色いメニュー全体
+.p-archive-menu__textbox {
+  background-color: $archive-bk-color;
+  color: #ffffff;
+  padding: 40px 5%;
+  @include tab {
+    width: 50%;
+  }
+}
+//茶色いメニューのタイトル
+.p-archive-menu__title {
+  font-size: 2rem;
+  font-family: $font-jp;
+  font-weight: bold;
+  padding-bottom: 20px;
+  @include pc {
+    font-size: 3.6rem;
+  }
+}
+
+.p-archive-menu__sub-title {
+  font-size: 1.6rem;
+  font-family: $font-jp;
+  font-weight: bold;
+  @include pc {
+    font-size: 2.4rem;
+  }
+}
+//茶色いメニューのテキスト
+.p-archive-menu__text {
+  padding-top: 10px;
+  padding-bottom: 40px;
+  @include pc {
+    padding-top: 15px;
+  }
+}
+
+
+
+//タブレット以降のメニュー横並び
+.p-archive-menu {
+  @include tab {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.p-archive-menu--cheseburger {
+  @extend .p-archive-menu;
+}
+.p-archive-menu--doublecheseburger {
+  @extend .p-archive-menu;
+}
+.p-archive-menu--specialcheseburger {
+  @extend .p-archive-menu;
+}
+
+//アーカイブメニューのsearchページ
+.p-archive-menu--product1,
+.p-archive-menu--product2,
+.p-archive-menu--product3,
+.p-archive-menu--product4,
+.p-archive-menu--product5 {
+  @extend .p-archive-menu;
+}

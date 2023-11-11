@@ -1,0 +1,71 @@
+@use '../../foundation/base' as *;
+//レイヤーの黒い背景
+.p-foodmenu--background {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+// レイヤーのアニメーションは_js.scssに記載している。
+
+//Menuの文字
+.p-foodmenu-title--sp {
+  position: absolute;
+  top: 2.2%; //8px
+  right: 2.2%; //8px
+  @include pc {
+    display: none;
+  }
+}
+.p-foodmenu-title--pc {
+  display: none;
+  @include pc {
+    display: block;
+    position: relative;
+    padding-left: 12%;
+    padding-top: 84px;
+  }
+}
+//メニュー一覧
+.p-foodmenu {
+  width: 87%;
+  @include tab {
+    width: 44%;
+  }
+  > ul {
+    padding-top: 100px;
+    padding-left: 12%;
+    margin-bottom: 160px;
+    @include pc {
+      margin-bottom: 0;
+      padding-top: 30px;
+    }
+  }
+}
+// メニュー一覧のアニメーションは_js.scssに記載している。
+
+//バーガー、サイド、ドリンクのフォント
+.p-foodmenu__list1 {
+  display: block;
+  font-size: 2.4rem;
+  font-family: $font-jp;
+  font-weight: bold;
+  color: #707070;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  @include pc {
+    padding-top: 45px;
+    padding-bottom: 0;
+  }
+}
+//チーズバーガー、ポテトなどのフォント
+.p-foodmenu__list2 {
+  display: block;
+  font-size: 2rem;
+  font-family: $font-jp;
+  color: #707070;
+  padding: 10px;
+  &:first-child {
+    margin-top: 40px;
+    @include pc {
+      margin-top: 30px;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+@use '../../foundation/base' as *;
+
+.c-image--wide {
+  width: 100%;
+  height: 124px;
+  object-fit: cover;
+  object-position: center bottom;
+  @include tab {
+    height: 265px;
+  }
+  @include pc {
+    height: 500px;
+  }
+}
+.c-image--small {
+  width: 42%;
+  object-fit: contain;
+  @include pc {
+    width: 45%;
+  }
+}
+.c-image--normal {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  object-fit: contain;
+  @include pc {
+    width: 43%;
+  }
+}
+.c-image--collection {
+  width: 100%;
+  object-fit: contain;
+}

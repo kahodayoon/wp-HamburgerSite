@@ -1,0 +1,11 @@
+@use '../foundation/base' as *;
+.l-right-side {
+  // height: 100%;
+  // position: absolute;
+  // z-index: 100;
+  // position: relative;
+  background-color: #f2ede9;
+ @include pc {
+  width: 20%;
+ }
+}

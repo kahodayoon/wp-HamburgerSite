@@ -1,0 +1,10 @@
+@use '../../foundation/base' as *;
+//虫眼鏡のアイコン
+.c-icon--loupe::before {
+  content: '\f002';
+  font-size: 3rem;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-style: normal;
+  font-size: 3rem;
+}

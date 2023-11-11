@@ -1,0 +1,6 @@
+@use '../foundation/base' as *;
+.l-left-side {
+  @include pc {
+    width: 80%;
+  }
+}

@@ -1,0 +1,74 @@
+@use '../foundation/base' as *;
+.js-foodmenu--background {
+  visibility: hidden;
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  animation-duration: 0.5s;
+  animation-name: fade-out;
+
+  @include pc {
+    display: none;
+  }
+}
+@keyframes fade-out {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  50% {
+    visibility: visible;
+    opacity: 0.5;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+.js-foodmenu--background.is-open {
+  visibility: visible;
+  animation-duration: 0.5s;
+  animation-name: fade-in;
+}
+@keyframes fade-in {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  50% {
+    visibility: visible;
+    opacity: 0.5;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.js-foodmenu {
+  position: fixed;
+  height: 100%; //スクロールさせるための高さ指定
+  overflow-y: scroll; //Fixedしたものをスクロールさせる。
+  z-index: 100;
+  top: 0;
+  right: -100%;
+  transition: ease 0.5s;
+  background-color: #f2ede9;
+  @include pc {
+    position: inherit;
+    width: 100%;
+    height: auto;
+  }
+}
+.js-foodmenu.is-open {
+  right: 0;
+}
+
+//メニューを開いた時に背景がスクロールしないように指定
+.js-body.is-open {
+  height: 100%;
+  overflow: hidden;
+}

@@ -1,0 +1,10 @@
+@use '../../foundation/base' as *;
+.p-archive-section--main {
+  padding: 12px 0;
+  @include tab {
+    padding-bottom: 30px;
+  }
+  .c-title-font {
+    padding-bottom: 25px;
+  }
+}

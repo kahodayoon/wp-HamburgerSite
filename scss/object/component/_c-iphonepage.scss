@@ -1,0 +1,9 @@
+@use '../../foundation/base' as *;
+.c-iphonepage-previous,
+.c-iphonepage-next {
+  color: #707070;
+  font-family: $font-jp;
+  @include tab {
+    display: none;
+  }
+}

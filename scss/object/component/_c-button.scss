@@ -1,0 +1,38 @@
+@use '../../foundation/base' as *;
+//検索のボタン
+.c-button {
+  display: inline-block;
+  background-color: #f2ede9;
+  border: solid 1px #707070;
+  border-radius: 10px;
+}
+
+//アーカイブページの「詳しく見る」のボタン
+.c-button--archive {
+  text-align: center;
+  margin: 0 auto;
+  width: 163px;
+  padding: 15px 40px;
+  background-color: #ffffff;
+  border: #707070;
+  border-radius: 30px;
+  color: #707070;
+  cursor: pointer;
+  @include pc {
+    width: 250px;
+    padding: 25px 40px;
+    border-radius: 40px;
+  }
+}
+//シングルページとショップページの下部のボタン
+.c-button--large {
+  @extend .c-button;
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  align-items: center;
+  font-weight: bold;
+  @include tab {
+    width: 430px;
+  }
+}

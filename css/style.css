@@ -1,0 +1,330 @@
+@charset "UTF-8";
+/*-----------レスポンシブ-----------*/
+/*-----------共通部分------------*/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Helvetica Neue", Arial, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  color: #000;
+  background-color: #fff;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 3.6rem;
+}
+
+/*-----------header------------*/
+#header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  position: fixed;
+  z-index: 10;
+  background-color: #fff;
+}
+#header .site-title {
+  width: 100%;
+}
+
+#hamburger {
+  display: block;
+  position: fixed;
+  top: 25px;
+  right: 45px;
+  width: 30px;
+  height: 30px;
+}
+
+.hamburger_bar {
+  display: block;
+  width: 30px;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  border-radius: 4px;
+  background: #000;
+  transition: all 0.5s;
+}
+
+.hamburger_bar:nth-child(1) {
+  top: 4px;
+}
+
+.hamburger_bar:nth-child(2) {
+  top: 14px;
+  transform: translateY(-50%);
+}
+
+.hamburger_bar:nth-child(3) {
+  bottom: 4px;
+  transform: translateY(-100%);
+}
+
+#hamburger.open {
+  z-index: 10;
+}
+#hamburger.open .hamburger_bar:nth-child(1) {
+  transform: translateY(10px) rotate(-315deg);
+  background-color: #fff;
+}
+#hamburger.open .hamburger_bar:nth-child(2) {
+  opacity: 0;
+}
+#hamburger.open .hamburger_bar:nth-child(3) {
+  transform: translateY(-10px) rotate(315deg);
+  background-color: #fff;
+}
+
+/*-----------ハンバーガーメニュー------------*/
+#global-nav {
+  display: block;
+  position: fixed;
+  width: 300px;
+  top: 0;
+  bottom: 0;
+  background-color: #121212;
+  padding: 60px 25px;
+  color: #fff;
+  left: -100%;
+  transition: left 0.7s;
+}
+#global-nav .nav-menu {
+  padding-bottom: 50px;
+}
+#global-nav .nav-menu li {
+  padding: 20px 0;
+  border-top: 1px solid #fff;
+}
+#global-nav .nav-menu li:last-child {
+  border-bottom: 1px solid #fff;
+}
+#global-nav .nav-sns li {
+  padding: 5px 0;
+}
+
+#global-nav.sp_open {
+  left: 0;
+  z-index: 10;
+}
+
+#mask.sp_open {
+  display: block;
+  position: fixed;
+  content: " ";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.6;
+  z-index: 2;
+}
+
+/*-----------mainvideo------------*/
+#mainvideo {
+  width: 100%;
+  max-height: 960px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding-top: 80px;
+  overflow: scroll;
+}
+
+/*-----------pickup------------*/
+#pickup {
+  padding-top: 100px;
+  padding: 100px auto 50px auto;
+  width: 100%;
+}
+#pickup .section-title {
+  padding-bottom: 30px;
+}
+
+/*-----------スライダー------------*/
+.slider {
+  visibility: hidden;
+}
+.slider img {
+  padding: 0 10px;
+}
+
+.slider.slick-initialized {
+  visibility: visible; /*slick.js読み込み完了後スライダー要素に対して付与されるクラス名。これでスライダーが実装できてから画像が表示されるようにできる*/
+}
+
+.slick-prev {
+  left: 10px;
+  z-index: 1;
+}
+
+.slick-next {
+  right: 10px;
+  z-index: 1;
+}
+
+/*-----------feature------------*/
+#feature {
+  padding-top: 100px;
+  margin-bottom: 50px;
+  padding: 100px auto 50px auto;
+  /*-----------フェードイン用------------*/
+}
+#feature .section-title {
+  margin-bottom: 30px;
+}
+#feature .items {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 20px;
+  justify-content: center;
+}
+#feature .items .item {
+  background-color: #fff;
+  box-shadow: 0px 0px 15px 0px #a9a9a9;
+}
+#feature .items .item .item-text {
+  padding: 30px;
+}
+#feature .items .item .item-text .item-cat {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+#feature .items .item .item-text .item-content {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+#feature .items .item .item-text .item-date {
+  text-align: right;
+  font-size: 1.2rem;
+}
+#feature .fade {
+  transition: all 1s;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0px, 20px);
+}
+#feature .fadein {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0px, 0px);
+}
+
+/*-----------contact------------*/
+.Form {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Form-Item {
+  padding-bottom: 24px;
+  width: 100%;
+}
+
+.Form-Item-Label {
+  width: 100%;
+  letter-spacing: 0.05em;
+  font-size: 1.44rem;
+  padding-bottom: 3px;
+}
+
+.Form-Item-Input {
+  height: 48px;
+  width: 100%;
+  background: #eaedf2;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.Form-Item-Textarea {
+  border: 1px solid #ddd;
+  height: 70px;
+  width: 100%;
+  background: #eaedf2;
+  font-size: 18px;
+  padding: 10px;
+}
+
+#contact {
+  background-color: #121212;
+  color: #fff;
+  padding-top: 100px;
+}
+#contact .section-title {
+  margin-bottom: 30px;
+}
+#contact .content {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1240px;
+  padding: 0 10px;
+  padding-bottom: 50px;
+}
+#contact .left {
+  width: 45%;
+  font-size: 1.44rem;
+}
+#contact .left .title {
+  margin-bottom: 30px;
+}
+#contact .left .text1 {
+  margin-bottom: 30px;
+}
+#contact .right {
+  width: 45%;
+}
+#contact .button {
+  cursor: pointer;
+  width: 200px;
+  background-color: #121212;
+  text-align: center;
+  padding: 12px 0;
+  border: 1px solid #fff;
+}
+#contact .button:hover {
+  background-color: #fff;
+  color: inherit;
+  color: #ff0000;
+}
+
+/*-----------footer------------*/
+#footer {
+  padding: 10px 0;
+  background-color: #121212;
+  color: #fff;
+}
+#footer p {
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */

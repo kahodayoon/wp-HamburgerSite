@@ -1,0 +1,27 @@
+@use '../../foundation/base' as *;
+.p-list {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  @include tab {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 7%;
+  }
+}
+
+.p-list__list2 {
+  padding-top: 60px;
+}
+
+//頭に数字がついているリスト
+.p-list__list1 ol{
+  counter-reset: count 0;
+}
+.p-list__list1 li:before {
+  content: counter(count) ". ";
+  counter-increment: count 1;
+}
+
+.p-list__list--ver2 {
+  padding: 12px 0 12px 18px;
+}

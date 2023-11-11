@@ -1,0 +1,51 @@
+@use '../../foundation/base' as *;
+//ヘッダーの検索ボックス
+.p-search-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  @include pc {
+    margin-bottom: 0;
+    width: 50%;
+  }
+  .p-search-box__text {
+    position: relative;
+    margin-right: 16px; //4.2%
+    width: 57%;
+    @include tab {
+      width: 47%;
+    }
+    @include pc {
+      width: 100%;
+    }
+
+    //検索欄
+    .c-input-text {
+      background-color: $main-bk-color; //base.$main-bk-color
+      height: 46px;
+      border: solid 1px #808080;
+      border-radius: 10px;
+      text-align: left;
+      padding-left: 50px ;
+      width: 100%;
+    }
+    //虫眼鏡アイコンの大きさ
+    .c-icon--loupe::before {
+      position: absolute;
+      top: 7px;
+      left: 10px;
+    }
+  }
+  //検索ボタン
+  .c-button {
+    width: 24%;
+    line-height: 46px;
+    font-weight: bold;
+    @include tab {
+      width: 16%;
+    }
+    @include pc {
+      width: 30%;
+    }
+  }
+}

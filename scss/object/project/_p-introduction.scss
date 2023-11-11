@@ -1,0 +1,47 @@
+@use '../../foundation/base' as *;
+//シングルページの最初の説明文
+.p-introduction {
+  padding-bottom: 30px;
+  .c-title-font {
+    padding-bottom: 25px;
+    @include tab {
+      font-size: 3.6rem;
+      padding-bottom: 55px;
+      padding-top: 40px;
+    }
+  }
+}
+
+.p-introduction--product {
+  padding-bottom: 30px;
+  .c-image--normal {
+    padding-top: 30px;
+  }
+}
+//商品の写真と説明
+.p-introduction__product {
+  display: flex;
+  padding-top: 30px;
+  align-items: flex-start;
+  gap: 3%;
+}
+.p-introduction__product1 {
+  @extend .p-introduction__product;
+}
+.p-introduction__product2 {
+  @extend .p-introduction__product;
+  flex-direction: row-reverse;
+}
+
+//商品の写真一覧
+.p-introduction--collection {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  @include tab {
+    margin-top: 240px;
+  }
+  @include pc {
+    margin-top: 0;
+  }
+}

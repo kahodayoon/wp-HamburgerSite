@@ -1,0 +1,9 @@
+@use '../../foundation/base' as *;
+.c-logo--header {
+  font-size: 4rem;
+  font-weight: bold;
+  padding-top: 43px;
+  @include pc {
+    font-size: 6.4rem;
+  }
+}

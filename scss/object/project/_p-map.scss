@@ -1,0 +1,58 @@
+@use '../../foundation/base' as *;
+//グーグルマップのスクショ背景
+.p-map {
+  background-image: url(../../../img/スクリーンショット\ 2020-02-10\ 11.47.42.jpg);
+  background-size: cover;
+  position: relative;
+  //長いグレー背景
+  .p-map__layer {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  //短いグレー背景
+  .p-map__layer__black {
+    position: absolute;
+    width: 100%;
+    height: 63%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 3; 
+    @include tab {
+      height:100%;
+    }
+    @include pc {
+      width: 63%;
+      height: 100%;
+    }
+  }
+}
+
+//フォント
+.p-map__text-box {
+  position: relative; //最前面にもってくるために指定。
+  z-index: 10; //最前面に。
+  padding: 42px 8%;
+  @include pc {
+    width: 63%;
+  }
+  .p-map__border {
+    width: 75px;
+    height: 2px;
+    background-color: #fff;
+  }
+  .p-map__title-font {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    font-family: $font-jp;
+    padding-bottom: 20px;
+  }
+  .p-map__text-font {
+    font-size: 1.4rem;
+    color: #fff;
+    font-family: $font-jp;
+    font-weight: bold;
+    padding-top: 20px;
+    line-height: 30px;
+  }
+}

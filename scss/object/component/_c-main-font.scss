@@ -1,0 +1,41 @@
+@use '../../foundation/base' as *;
+//フロントページのヘッダー直下のメインビジュアルのフォント
+.c-main-font--front {
+  font-size: 3.6rem;
+  font-weight: bold;
+  color: #fff;
+  font-family: $font-jp;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  @include tab {
+    padding: 0 10%;
+  }
+}
+
+//アーカイブページのヘッダー直下のメインビジュアルのフォント
+.c-main-font--archive-large {
+  font-size: 3.6rem;
+  font-weight: bold;
+  color: #fff;
+  font-family: $font-en;
+  @include pc {
+    font-size: 6rem;
+  }
+}
+.c-main-font--archive-small {
+  font-size: 1.6rem;
+  font-family: $font-jp;
+  color: #fff;
+}
+
+//シングルページのヘッダー直下のメインビジュアルのフォント
+.c-main-font-visual {
+  font-size: 3.6rem;
+  font-weight: bold;
+  color: #fff;
+  font-family: $font-en;
+  @include tab {
+    font-size: 6rem;
+  }
+}

@@ -9,6 +9,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://kit.fontawesome.com/92cec73944.js" crossorigin="anonymous"></script>
-    <script src="./script.js"></script>
+    <script src="<?php bloginfo('template_url');?>/js/script.js"></script>
+    <?php wp_footer(); ?>
   </body>
 </html>

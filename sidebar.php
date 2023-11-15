@@ -4,7 +4,8 @@
             <span class="c-menu--close__bar"></span>
             <span class="c-menu--close__bar"></span>
           </button>
-          <ul>
+          <?php wp_nav_menu(); ?>
+          <!-- <ul>
             <li class="p-foodmenu__list1">
               <a href="#">バーガー</a>
               <ul>
@@ -36,6 +37,6 @@
                 <li class="p-foodmenu__list2"><a href="#">コーヒー（Ice/Hot）</a></li>
               </ul>
             </li>
-          </ul>
+          </ul> -->
         </nav>
         <div class="p-foodmenu--background js-foodmenu--background"></div>

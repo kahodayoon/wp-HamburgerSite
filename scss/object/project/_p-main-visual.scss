@@ -1,12 +1,10 @@
-@use '../../foundation/base' as *;
+@use "../../foundation/base" as *;
 //ヘッダー直下のメインビジュアル
 .p-main-visual {
-  background-image: url(../../../../img/main-visual.jpg);
+  background-image: url(../img/main-visual.jpg);
   background-size: cover;
   background-position: center;
   @include pc {
-    background-image: url(../../../img/mainvisual-pc.jpg);
+    background-image: url(../img/mainvisual-pc.jpg);
   }
 }
-
-

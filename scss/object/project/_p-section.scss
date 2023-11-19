@@ -9,7 +9,7 @@
 //TakeOutの背景
 .p-section--TakeOut {
   @extend .p-section;
-  background-image: url(../../../img/TakeOut.jpg);
+  background-image: url(../img/TakeOut.jpg);
   margin-bottom: 15px;
   @include tab {
     margin-bottom: 0;
@@ -19,7 +19,7 @@
 //EatInの背景
 .p-section--EatIn {
   @extend .p-section;
-  background-image: url(../../../img/EatIn.jpg);
+  background-image: url(../img/EatIn.jpg);
   @include tab {
     width: 50%;
   }

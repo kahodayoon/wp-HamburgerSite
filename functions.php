@@ -1,6 +1,7 @@
 <?php
     add_theme_support( 'menus' ); 
     add_theme_support( 'title-tag' );
+    add_theme_support( 'post-thumbnails' ); 
 
     //タイトル出力
     function HamburgerSite_title( $title ) {
@@ -18,7 +19,7 @@
 define("DIRE", get_template_directory_uri());
 
 function add_files(){
-    // wp_enqueue_style('reset_style','https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css') これを記載するとエラーが表示される。
+    wp_enqueue_style('reset_style','https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css');
     wp_enqueue_style('my_font1','https://fonts.googleapis.com',array(), '1.0.0' );
     wp_enqueue_style('my_font2','https://fonts.gstatic.com',array(), '1.0.0' );
     wp_enqueue_style('my_font2','https://fonts.googleapis.com/css2?family=M+PLUS+1&family=Roboto&display=swap',array(), '1.0.0' );

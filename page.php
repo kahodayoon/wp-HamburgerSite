@@ -47,7 +47,7 @@
             <img class="c-image--collection" src="<?php echo get_template_directory_uri(); ?>/img/cooked-foods.jpg" alt="商品の写真" />
             <img class="c-image--collection" src="<?php echo get_template_directory_uri(); ?>/img/cooked-foods.jpg" alt="商品の写真" />
             <img class="c-image--collection" src="<?php echo get_template_directory_uri(); ?>/img/cooked-foods.jpg" alt="商品の写真" />
-            <img class="c-image--collection" src="./img/cooked-foods.jpg" alt="商品の写真" />
+            <img class="c-image--collection" src="<?php echo get_template_directory_uri(); ?>/img/cooked-foods.jpg" alt="商品の写真" />
             <img class="c-image--collection" src="<?php echo get_template_directory_uri(); ?>/img/cooked-foods.jpg" alt="商品の写真" />
             <img class="c-image--collection" src="<?php echo get_template_directory_uri(); ?>/img/cooked-foods.jpg" alt="商品の写真" />
             <img class="c-image--collection" src="<?php echo get_template_directory_uri(); ?>/img/cooked-foods.jpg" alt="商品の写真" />

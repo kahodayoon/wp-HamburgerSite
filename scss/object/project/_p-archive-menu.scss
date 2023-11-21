@@ -5,17 +5,19 @@
   gap: 25px;
 }
 
-.p-archive-menu__image {
+.p-archive-menu__image,
+.wp-post-image {
   width: 100%;
   object-fit: cover;
-  // object-position: left;
   @include tab {
     width: 50%;
+    height: auto;
   }
 }
 
 //茶色いメニュー全体
-.p-archive-menu__textbox {
+.p-archive-menu__textbox,
+.type-post {
   background-color: $archive-bk-color;
   color: #ffffff;
   padding: 40px 5%;
@@ -60,15 +62,10 @@
     flex-direction: row;
   }
 }
-.p-archive-menu--cheseburger {
-  @extend .p-archive-menu;
+.p-archive-menu + .p-archive-menu {
+  margin-top: 5%;
 }
-.p-archive-menu--doublecheseburger {
-  @extend .p-archive-menu;
-}
-.p-archive-menu--specialcheseburger {
-  @extend .p-archive-menu;
-}
+
 
 //アーカイブメニューのsearchページ
 .p-archive-menu--product1,

@@ -1,6 +1,7 @@
 @use '../../foundation/base' as *;
 //ページ番号
-.c-tabletpage-number {
+// .c-tabletpage-number,
+.current , .page {
   display: none;
   @include tab {
     display: block;
@@ -8,13 +9,14 @@
     padding: 8px 12.5px;
   }
 }
-.c-tabletpage-number:first-of-type {
-  @include tab {
-    color: #ffffff;
-    background-color: #3c2b1c;
-  }
-}
-.c-tabletpage-number--first {
+// .c-tabletpage-number:first-of-type {
+//   @include tab {
+//     color: #ffffff;
+//     background-color: #3c2b1c;
+//   }
+// }
+// .c-tabletpage-number--first,
+.current {
   @include tab {
     color: #ffffff;
     background-color: #3c2b1c;
@@ -22,20 +24,28 @@
 }
 
 //矢印と「page1/10」の文字
-.c-tabletpage-text,
-.c-tabletpage-arrow--previous,
-.c-tabletpage-arrow--next {
+// .c-tabletpage-text,
+// .c-tabletpage-arrow--previous,
+// .c-tabletpage-arrow--next,
+.pages,
+.nextpostslink,
+.previouspostslink {
   display: none;
   @include tab {
     display: block;
     padding: 8px 0;
+    line-height: 1.6rem;
   }
 }
-.c-tabletpage-arrow--next {
-  @include pc {
-    display: none;
-  }
+.nextpostslink,
+.previouspostslink {
+  font-size: 2rem;
 }
-.c-tabletpage-text {
-  padding-right: 5px;
-}
+// .c-tabletpage-arrow--next {
+//   @include pc {
+//     display: none;
+//   }
+// }
+// .c-tabletpage-text {
+//   padding-right: 5px;
+// }

@@ -23,8 +23,9 @@ function add_files(){
     wp_enqueue_style('my_font1','https://fonts.googleapis.com',array(), '1.0.0' );
     wp_enqueue_style('my_font2','https://fonts.gstatic.com',array(), '1.0.0' );
     wp_enqueue_style('my_font2','https://fonts.googleapis.com/css2?family=M+PLUS+1&family=Roboto&display=swap',array(), '1.0.0' );
+    wp_enqueue_script('fontawesome_script', 'https://kit.fontawesome.com/92cec73944.js'); 
     wp_enqueue_style('my_style',DIRE.'/css/common.css',array(), '1.0.0' );
-    wp_enqueue_script('my_script',DIRE.'/script.js',array(), '1.0.0' ,true);
+    wp_enqueue_script('my_script',DIRE.'/script.js',array( 'jquery' ), '1.0.0' ,false);
 }
 add_action('wp_enqueue_scripts', 'add_files');
 

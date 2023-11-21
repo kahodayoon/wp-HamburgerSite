@@ -247,11 +247,11 @@ li {
   }
 }
 
-.c-tabletpage-number {
+.current, .page {
   display: none;
 }
 @media (min-width: 650px) {
-  .c-tabletpage-number {
+  .current, .page {
     display: block;
     border: solid 1px #707070;
     padding: 8px 12.5px;
@@ -259,41 +259,30 @@ li {
 }
 
 @media (min-width: 650px) {
-  .c-tabletpage-number:first-of-type {
+  .current {
     color: #ffffff;
     background-color: #3c2b1c;
   }
 }
 
-@media (min-width: 650px) {
-  .c-tabletpage-number--first {
-    color: #ffffff;
-    background-color: #3c2b1c;
-  }
-}
-
-.c-tabletpage-text,
-.c-tabletpage-arrow--previous,
-.c-tabletpage-arrow--next {
+.pages,
+.nextpostslink,
+.previouspostslink {
   display: none;
 }
 @media (min-width: 650px) {
-  .c-tabletpage-text,
-.c-tabletpage-arrow--previous,
-.c-tabletpage-arrow--next {
+  .pages,
+.nextpostslink,
+.previouspostslink {
     display: block;
     padding: 8px 0;
+    line-height: 1.6rem;
   }
 }
 
-@media (min-width: 1000px) {
-  .c-tabletpage-arrow--next {
-    display: none;
-  }
-}
-
-.c-tabletpage-text {
-  padding-right: 5px;
+.nextpostslink,
+.previouspostslink {
+  font-size: 2rem;
 }
 
 .c-title-font {
@@ -355,7 +344,8 @@ li {
   border-radius: 10px;
 }
 
-.c-button--archive {
+.c-button--archive,
+.more-link {
   text-align: center;
   margin: 0 auto;
   width: 163px;
@@ -367,7 +357,8 @@ li {
   cursor: pointer;
 }
 @media (min-width: 1000px) {
-  .c-button--archive {
+  .c-button--archive,
+.more-link {
     width: 250px;
     padding: 25px 40px;
     border-radius: 40px;
@@ -628,24 +619,29 @@ li {
   gap: 25px;
 }
 
-.p-archive-menu__image {
+.p-archive-menu__image,
+.wp-post-image {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 @media (min-width: 650px) {
-  .p-archive-menu__image {
+  .p-archive-menu__image,
+.wp-post-image {
     width: 50%;
+    height: auto;
   }
 }
 
-.p-archive-menu__textbox {
+.p-archive-menu__textbox,
+.type-post {
   background-color: #3C2B1C;
   color: #ffffff;
   padding: 40px 5%;
 }
 @media (min-width: 650px) {
-  .p-archive-menu__textbox {
+  .p-archive-menu__textbox,
+.type-post {
     width: 50%;
   }
 }
@@ -688,10 +684,46 @@ li {
 .p-archive-menu--product2,
 .p-archive-menu--product3,
 .p-archive-menu--product4,
-.p-archive-menu--product5, .p-archive-menu--specialcheseburger, .p-archive-menu--doublecheseburger, .p-archive-menu--cheseburger {
+.p-archive-menu--product5 {
     display: flex;
     flex-direction: row;
   }
+}
+
+.p-archive-menu + .p-archive-menu, .p-archive-menu--product1 + .p-archive-menu,
+.p-archive-menu--product2 + .p-archive-menu,
+.p-archive-menu--product3 + .p-archive-menu,
+.p-archive-menu--product4 + .p-archive-menu,
+.p-archive-menu--product5 + .p-archive-menu, .p-archive-menu + .p-archive-menu--product1, .p-archive-menu--product1 + .p-archive-menu--product1,
+.p-archive-menu--product2 + .p-archive-menu--product1,
+.p-archive-menu--product3 + .p-archive-menu--product1,
+.p-archive-menu--product4 + .p-archive-menu--product1,
+.p-archive-menu--product5 + .p-archive-menu--product1,
+.p-archive-menu + .p-archive-menu--product2,
+.p-archive-menu--product1 + .p-archive-menu--product2,
+.p-archive-menu--product2 + .p-archive-menu--product2,
+.p-archive-menu--product3 + .p-archive-menu--product2,
+.p-archive-menu--product4 + .p-archive-menu--product2,
+.p-archive-menu--product5 + .p-archive-menu--product2,
+.p-archive-menu + .p-archive-menu--product3,
+.p-archive-menu--product1 + .p-archive-menu--product3,
+.p-archive-menu--product2 + .p-archive-menu--product3,
+.p-archive-menu--product3 + .p-archive-menu--product3,
+.p-archive-menu--product4 + .p-archive-menu--product3,
+.p-archive-menu--product5 + .p-archive-menu--product3,
+.p-archive-menu + .p-archive-menu--product4,
+.p-archive-menu--product1 + .p-archive-menu--product4,
+.p-archive-menu--product2 + .p-archive-menu--product4,
+.p-archive-menu--product3 + .p-archive-menu--product4,
+.p-archive-menu--product4 + .p-archive-menu--product4,
+.p-archive-menu--product5 + .p-archive-menu--product4,
+.p-archive-menu + .p-archive-menu--product5,
+.p-archive-menu--product1 + .p-archive-menu--product5,
+.p-archive-menu--product2 + .p-archive-menu--product5,
+.p-archive-menu--product3 + .p-archive-menu--product5,
+.p-archive-menu--product4 + .p-archive-menu--product5,
+.p-archive-menu--product5 + .p-archive-menu--product5 {
+  margin-top: 5%;
 }
 
 .p-section, .p-section--EatIn, .p-section--TakeOut {
@@ -923,33 +955,41 @@ li {
   }
 }
 
-.p-pagenavi {
+.p-pagenavi,
+.wp-pagenavi {
   display: flex;
   justify-content: space-between;
   padding-bottom: 20px;
 }
 @media (min-width: 650px) {
-  .p-pagenavi {
+  .p-pagenavi,
+.wp-pagenavi {
     justify-content: center;
     gap: 2%;
   }
 }
 
+.wp-pagenavi a:hover {
+  color: #FFF;
+  background-color: #999;
+  border-color: #999;
+}
+
 .p-single-visual {
-  background-image: url(../../../../img/hamburger-with-vegetables.jpg);
+  background-image: url(../img/hamburger-with-vegetables.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
 }
 @media (min-width: 650px) {
   .p-single-visual {
-    background-image: url(../../../img/hamburger-with-vegetables-tab.jpg);
+    background-image: url(../img/hamburger-with-vegetables-tab.jpg);
     height: 500px;
   }
 }
 @media (min-width: 1000px) {
   .p-single-visual {
-    background-image: url(../../../img/hamburger-with-vegetables-pc.jpg);
+    background-image: url(../img/hamburger-with-vegetables-pc.jpg);
   }
 }
 .p-single-visual .c-main-font-visual {

@@ -1,16 +1,16 @@
 @use '../../foundation/base' as *;
 //ヘッダー直下のsingleビジュアル
 .p-single-visual {
-  background-image: url(../../../../img/hamburger-with-vegetables.jpg);
+  background-image: url(../img/hamburger-with-vegetables.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
   @include tab {
-    background-image: url(../../../img/hamburger-with-vegetables-tab.jpg);
+    background-image: url(../img/hamburger-with-vegetables-tab.jpg);
     height: 500px;
   }
   @include pc {
-    background-image: url(../../../img/hamburger-with-vegetables-pc.jpg);
+    background-image: url(../img/hamburger-with-vegetables-pc.jpg);
   }
   .c-main-font-visual {
     position: absolute;

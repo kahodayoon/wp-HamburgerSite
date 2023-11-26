@@ -7,6 +7,7 @@
 
 .p-archive-menu__image,
 .wp-post-image {
+  display: block;
   width: 100%;
   object-fit: cover;
   @include tab {
@@ -36,7 +37,8 @@
   }
 }
 
-.p-archive-menu__sub-title {
+.p-archive-menu__sub-title,
+.p-archive-menu__text > h2 {
   font-size: 1.6rem;
   font-family: $font-jp;
   font-weight: bold;
@@ -45,7 +47,7 @@
   }
 }
 //茶色いメニューのテキスト
-.p-archive-menu__text {
+.p-archive-menu__text > p:first-of-type {
   padding-top: 10px;
   padding-bottom: 40px;
   @include pc {
@@ -57,6 +59,7 @@
 
 //タブレット以降のメニュー横並び
 .p-archive-menu {
+  width: 100%;
   @include tab {
     display: flex;
     flex-direction: row;
@@ -65,6 +68,9 @@
 .p-archive-menu + .p-archive-menu {
   margin-top: 5%;
 }
+.p-archive-menu > a {
+  display: block
+} 
 
 
 //アーカイブメニューのsearchページ

@@ -1,5 +1,6 @@
 <?php get_header(); ?>  
-  <body <?php body_class(); ?> class="js-body">
+  <body <?php body_class(); ?>>
+  <?php wp_body_open(); ?>
     <div class="l-main-contents">
       <div class="l-right-side">
       <?php get_sidebar(); ?>
@@ -27,10 +28,17 @@
              while( have_posts() ) :
               the_post(); ?>
               <section class="p-archive-menu">
-              <?php the_post_thumbnail( 'full',array( 'class' => 'p-archive-menu__image' )); ?>
+              <?php if(has_post_thumbnail()) : ?>
+               <?php the_post_thumbnail( 'full',array( 'class' => 'p-archive-menu__image' )); ?>
+              <?php else : ?>
+              <img src="<?php echo esc_url(get_theme_file_uri('/img/dummy-image.jpg')); ?>" alt="" class="p-archive-menu__image"> 
+              <!-- アイキャッチ画像を指定しなかったときのダミー画像を表示させる↑ -->
+              <?php endif ; ?>
               <div id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
                 <h2 class="p-archive-menu__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                <div class="p-archive-menu__text">
                 <?php the_content('詳しく見る'); ?>
+                </div>
              </section>
               <?php endwhile; else :?>
               <p>表示する記事がありません</p>

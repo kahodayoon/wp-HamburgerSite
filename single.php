@@ -1,5 +1,6 @@
 <?php get_header(); ?>  
-  <body <?php body_class(); ?> class="js-body">
+  <body <?php body_class(); ?>>
+  <?php wp_body_open(); ?>
     <div class="l-main-contents">
       <div class="l-right-side">
       <?php get_sidebar(); ?>
@@ -7,9 +8,29 @@
       <div class="l-left-side">
       <?php get_header('search'); ?>   
         <div class="l-main--visual p-single-visual wrapper">
-          <h2 class="c-main-font-visual">h1 チーズバーガー</h2>
+          <h2 class="c-main-font-visual"><?php single_post_title(); ?></h2>
         </div>
         <div class="l-container wrapper">
+          <?php
+            if( have_posts() ) :
+             while( have_posts() ) :
+              the_post(); ?>
+              <!-- <section class="p-archive-menu"> -->
+              <div class="p-introduction">
+              <?php if(has_post_thumbnail()) : ?>
+               <?php the_post_thumbnail( 'full',array( 'class' => 'p-archive-menu__image' )); ?>
+              <?php endif ; ?> 
+              <div id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
+                <h2 class="p-archive-menu__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                <?php the_content(); ?>
+              </div>
+              </div>
+              <?php endwhile; else :?>
+              <p>表示する記事がありません</p>
+              <?php endif;?>
+     
+
+
           <div class="p-introduction">
             <h2 class="c-title-font">見出しh2</h2>
             <p class="c-main-text u-mb">

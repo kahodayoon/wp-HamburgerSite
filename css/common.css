@@ -215,15 +215,23 @@ li {
   }
 }
 
-.c-info {
+.wp-block-page-list {
   padding-top: 16px;
   color: #ffffff;
   font-family: "M PLUS 1", sans-serif;
   font-size: 1.8rem;
   text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.wp-block-page-list li + li::before {
+  content: " ";
+  border-left: 2px solid #ffffff;
+  padding-left: 20px;
+  margin-left: 20px;
 }
 @media (min-width: 650px) {
-  .c-info {
+  .wp-block-page-list {
     padding-top: 30px;
   }
 }
@@ -247,11 +255,13 @@ li {
   }
 }
 
-.current, .page {
+.wp-pagenavi .current,
+.wp-pagenavi .page {
   display: none;
 }
 @media (min-width: 650px) {
-  .current, .page {
+  .wp-pagenavi .current,
+.wp-pagenavi .page {
     display: block;
     border: solid 1px #707070;
     padding: 8px 12.5px;
@@ -346,6 +356,7 @@ li {
 
 .c-button--archive,
 .more-link {
+  display: block;
   text-align: center;
   margin: 0 auto;
   width: 163px;
@@ -621,6 +632,7 @@ li {
 
 .p-archive-menu__image,
 .wp-post-image {
+  display: block;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -658,27 +670,36 @@ li {
   }
 }
 
-.p-archive-menu__sub-title {
+.p-archive-menu__sub-title,
+.p-archive-menu__text > h2 {
   font-size: 1.6rem;
   font-family: "M PLUS 1", sans-serif;
   font-weight: bold;
 }
 @media (min-width: 1000px) {
-  .p-archive-menu__sub-title {
+  .p-archive-menu__sub-title,
+.p-archive-menu__text > h2 {
     font-size: 2.4rem;
   }
 }
 
-.p-archive-menu__text {
+.p-archive-menu__text > p:first-of-type {
   padding-top: 10px;
   padding-bottom: 40px;
 }
 @media (min-width: 1000px) {
-  .p-archive-menu__text {
+  .p-archive-menu__text > p:first-of-type {
     padding-top: 15px;
   }
 }
 
+.p-archive-menu, .p-archive-menu--product1,
+.p-archive-menu--product2,
+.p-archive-menu--product3,
+.p-archive-menu--product4,
+.p-archive-menu--product5 {
+  width: 100%;
+}
 @media (min-width: 650px) {
   .p-archive-menu, .p-archive-menu--product1,
 .p-archive-menu--product2,
@@ -724,6 +745,14 @@ li {
 .p-archive-menu--product4 + .p-archive-menu--product5,
 .p-archive-menu--product5 + .p-archive-menu--product5 {
   margin-top: 5%;
+}
+
+.p-archive-menu > a, .p-archive-menu--product1 > a,
+.p-archive-menu--product2 > a,
+.p-archive-menu--product3 > a,
+.p-archive-menu--product4 > a,
+.p-archive-menu--product5 > a {
+  display: block;
 }
 
 .p-section, .p-section--EatIn, .p-section--TakeOut {
@@ -911,19 +940,20 @@ li {
     width: 44%;
   }
 }
-.p-foodmenu > ul {
+.p-foodmenu > .menu-food-menu-container {
   padding-top: 100px;
   padding-left: 12%;
   margin-bottom: 160px;
 }
 @media (min-width: 1000px) {
-  .p-foodmenu > ul {
+  .p-foodmenu > .menu-food-menu-container {
     margin-bottom: 0;
     padding-top: 30px;
   }
 }
 
-.p-foodmenu__list1 {
+.p-foodmenu__list1,
+.menu-item-has-children {
   display: block;
   font-size: 2.4rem;
   font-family: "M PLUS 1", sans-serif;
@@ -933,26 +963,34 @@ li {
   padding-bottom: 40px;
 }
 @media (min-width: 1000px) {
-  .p-foodmenu__list1 {
+  .p-foodmenu__list1,
+.menu-item-has-children {
     padding-top: 45px;
     padding-bottom: 0;
   }
 }
 
-.p-foodmenu__list2 {
+.p-foodmenu__list2,
+.sub-menu > .menu-item {
   display: block;
   font-size: 2rem;
   font-family: "M PLUS 1", sans-serif;
   color: #707070;
   padding: 10px;
 }
-.p-foodmenu__list2:first-child {
+.p-foodmenu__list2:first-child,
+.sub-menu > .menu-item:first-child {
   margin-top: 40px;
 }
 @media (min-width: 1000px) {
-  .p-foodmenu__list2:first-child {
+  .p-foodmenu__list2:first-child,
+.sub-menu > .menu-item:first-child {
     margin-top: 30px;
   }
+}
+
+.menu-item-has-children:last-of-type > .sub-menu {
+  margin-bottom: 100px;
 }
 
 .p-pagenavi,
@@ -1222,7 +1260,7 @@ li {
   right: 0;
 }
 
-.js-body.is-open {
+.home.is-open {
   height: 100%;
   overflow: hidden;
 }

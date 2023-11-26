@@ -1,12 +1,15 @@
-@use '../../foundation/base' as *;
+@use "../../foundation/base" as *;
 //ページ番号
 // .c-tabletpage-number,
-.current , .page {
-  display: none;
-  @include tab {
-    display: block;
-    border: solid 1px #707070;
-    padding: 8px 12.5px;
+.wp-pagenavi {
+  .current,
+  .page {
+    display: none;
+    @include tab {
+      display: block;
+      border: solid 1px #707070;
+      padding: 8px 12.5px;
+    }
   }
 }
 // .c-tabletpage-number:first-of-type {

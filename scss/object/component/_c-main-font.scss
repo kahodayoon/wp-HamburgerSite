@@ -1,4 +1,4 @@
-@use '../../foundation/base' as *;
+@use "../../foundation/base" as *;
 //フロントページのヘッダー直下のメインビジュアルのフォント
 .c-main-font--front {
   font-size: 3.6rem;
@@ -38,4 +38,10 @@
   @include tab {
     font-size: 6rem;
   }
+}
+.l-main--visual > .c-main-font-visual {
+  color: #3c2a10;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }

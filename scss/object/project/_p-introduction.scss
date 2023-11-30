@@ -1,4 +1,4 @@
-@use '../../foundation/base' as *;
+@use "../../foundation/base" as *;
 //シングルページの最初の説明文
 .p-introduction {
   padding-bottom: 30px;
@@ -7,6 +7,16 @@
     @include tab {
       font-size: 3.6rem;
       padding-bottom: 55px;
+      padding-top: 40px;
+    }
+  }
+}
+
+//シングルページの最初のテキストの上に余白をつける。（WordPressで使用）
+.p-introduction {
+  // .type-post p:first-child,
+  .type-post .wp-block-heading:first-child {
+    @include tab {
       padding-top: 40px;
     }
   }
@@ -37,7 +47,7 @@
 .p-introduction--collection {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   @include tab {
     margin-top: 240px;
   }

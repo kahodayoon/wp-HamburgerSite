@@ -1,8 +1,19 @@
-@use '../../foundation/base' as *;
-.u-mb {
-  margin-bottom: 30px;
-  @include tab {
-    margin-bottom: 60px;
+@use "../../foundation/base" as *;
+// .u-mb,
+.p-introduction {
+  .wp-block-heading,wp-block-quote{
+    margin-bottom: 30px;
+    @include tab {
+      margin-bottom: 60px;
+    }
+  }
+  p {
+    margin-bottom: 30px;
+  }
+  p + .wp-block-heading {
+    @include tab {
+    padding-top: 30px;
+    }
   }
 }
 .u-mb-small {
@@ -10,4 +21,10 @@
 }
 .u-mb-large {
   margin-bottom: 40px;
+}
+.wp-block-image {
+  padding-bottom: 10px;
+  @include tab {
+    padding-bottom: 30px;
+  }
 }

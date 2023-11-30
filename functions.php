@@ -72,3 +72,10 @@ function wpbeg_widgets_init() {
       );
 }
 add_action( 'widgets_init', 'wpbeg_widgets_init' );
+
+//ビジュアルエディタにCSSを設定する
+add_editor_style('editor-style.css');
+function HamburgerSite_theme_add_editor_styles() {
+    add_editor_style( get_template_directory_uri() . "/css/editor-style.css" );
+}
+add_action( 'admin_init', 'HamburgerSite_theme_add_editor_styles' );

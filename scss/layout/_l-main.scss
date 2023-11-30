@@ -10,4 +10,12 @@
 }
 .l-main--visual {
   height: 225px;
+  position: relative;
+}
+
+//p-single-visualがある場合のみl-main--visualの高さを指定
+.l-main--visual:has(.p-single-visual) {
+  @include tab {
+    height: 500px;
+  }
 }

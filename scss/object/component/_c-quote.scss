@@ -1,5 +1,8 @@
 @use '../../foundation/base' as *;
-.c-quote {
+// .c-quote,
+.wp-block-quote {
+  margin: 0 auto;
+  padding: 0 5.2%;
   background-color: #f5f5f5;
   padding-top: 20px;
   padding-bottom: 20px;

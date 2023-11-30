@@ -25,13 +25,17 @@
           <div>
           <?php
             if( have_posts() ) :
-             while( have_posts() ) :
+              while( have_posts() ) :
               the_post(); ?>
               <section class="p-archive-menu">
               <?php if(has_post_thumbnail()) : ?>
-               <?php the_post_thumbnail( 'full',array( 'class' => 'p-archive-menu__image' )); ?>
+              <a href="<?php echo esc_url(get_permalink()); ?>">
+              <?php the_post_thumbnail( 'full',array( 'class' => 'p-archive-menu__image' )); ?>
+              </a>
               <?php else : ?>
+              <a href="<?php echo esc_url(get_permalink()); ?>">
               <img src="<?php echo esc_url(get_theme_file_uri('/img/dummy-image.jpg')); ?>" alt="" class="p-archive-menu__image"> 
+              </a>
               <!-- アイキャッチ画像を指定しなかったときのダミー画像を表示させる↑ -->
               <?php endif ; ?>
               <div id="post-<?php the_ID(); ?>" <?php post_class(); ?> >

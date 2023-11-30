@@ -1,29 +1,35 @@
-@use '../../foundation/base' as *;
+@use "../../foundation/base" as *;
 .p-archive-menu-main {
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
+.p-archive-menu > a {
+  display: block;
+  width: 100%;
+}
 
+//シングルページのメインの写真
 .p-archive-menu__image,
 .wp-post-image {
   display: block;
   width: 100%;
   object-fit: cover;
   @include tab {
-    width: 50%;
-    height: auto;
+    height: 100%;
   }
 }
 
 //茶色いメニュー全体
 .p-archive-menu__textbox,
-.type-post {
+.p-archive-menu > .type-post {
   background-color: $archive-bk-color;
   color: #ffffff;
   padding: 40px 5%;
   @include tab {
-    width: 50%;
+    // width: 50%;
+    flex-basis: 50%;
+    flex-shrink: 0;
   }
 }
 //茶色いメニューのタイトル
@@ -55,8 +61,6 @@
   }
 }
 
-
-
 //タブレット以降のメニュー横並び
 .p-archive-menu {
   width: 100%;
@@ -69,9 +73,8 @@
   margin-top: 5%;
 }
 .p-archive-menu > a {
-  display: block
-} 
-
+  display: block;
+}
 
 //アーカイブメニューのsearchページ
 .p-archive-menu--product1,

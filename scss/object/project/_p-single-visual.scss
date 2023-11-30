@@ -1,16 +1,11 @@
-@use '../../foundation/base' as *;
+@use "../../foundation/base" as *;
 //ヘッダー直下のsingleビジュアル
 .p-single-visual {
-  background-image: url(../img/hamburger-with-vegetables.jpg);
-  background-size: cover;
-  background-position: center;
   position: relative;
   @include tab {
-    background-image: url(../img/hamburger-with-vegetables-tab.jpg);
     height: 500px;
   }
   @include pc {
-    background-image: url(../img/hamburger-with-vegetables-pc.jpg);
   }
   .c-main-font-visual {
     position: absolute;
@@ -18,3 +13,10 @@
     transform: translateY(-50%);
   }
 }
+
+.p-single-visual + p-introduction {
+  @include tab {
+    margin-top: 500px;
+  }
+}
+

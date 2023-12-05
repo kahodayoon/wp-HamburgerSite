@@ -1,6 +1,6 @@
 @use "../../foundation/base" as *;
 //ヘッダー直下のsingleビジュアル
-.p-single-visual {
+.p-title-visual {
   position: relative;
   @include tab {
     height: 500px;
@@ -14,7 +14,7 @@
   }
 }
 
-.p-single-visual + p-introduction {
+.p-title-visual + p-introduction {
   @include tab {
     margin-top: 500px;
   }

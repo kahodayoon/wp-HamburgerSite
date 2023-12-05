@@ -6,17 +6,26 @@
       $(".js-foodmenu").toggleClass("is-open");
       $(".js-foodmenu--background").toggleClass("is-open");
       $(".home").toggleClass("is-open");
+      $(".archive").toggleClass("is-open");
+      $(".page").toggleClass("is-open");
+      $(".single").toggleClass("is-open");
     });
     $(".js-foodmenu--close").click(function () {
       $(".js-foodmenu").toggleClass("is-open");
       $(".js-foodmenu--background").toggleClass("is-open");
       $(".home").removeClass("is-open");
+      $(".archive").removeClass("is-open");
+      $(".page").removeClass("is-open");
+      $(".single").removeClass("is-open");
     });
     $(window).resize(function () {
       // 画面幅が変更されたときに実行させたい処理内容
       $(".js-foodmenu").removeClass("is-open");
       $(".js-foodmenu--background").removeClass("is-open");
       $(".home").removeClass("is-open");
+      $(".archive").removeClass("is-open");
+      $(".page").removeClass("is-open");
+      $(".single").removeClass("is-open");
     });
   });
 })(jQuery);

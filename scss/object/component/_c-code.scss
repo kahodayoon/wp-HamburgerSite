@@ -1,5 +1,6 @@
 @use '../../foundation/base' as *;
-.c-code {
+.c-code,
+.wp-block-code {
   padding: 50px;
   background-color: #f5f5f5;
   font-size: 1.8rem;

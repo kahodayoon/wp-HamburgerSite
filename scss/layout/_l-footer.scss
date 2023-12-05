@@ -3,4 +3,7 @@
   height: 150px;
   background-image: url(../img/layer1.jpg);
   // background-color: #9D8670;
+  @include tab {
+    height: 170px;
+  }
 }

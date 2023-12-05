@@ -68,7 +68,7 @@
 }
 
 //メニューを開いた時に背景がスクロールしないように指定
-.home.is-open {
+:is(.home, .archive, .page, .single).is-open {
   height: 100%;
   overflow: hidden;
 }

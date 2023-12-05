@@ -43,8 +43,9 @@
   flex-direction: row-reverse;
 }
 
-//商品の写真一覧
-.p-introduction--collection {
+//商品の写真一覧(ギャラリーのスタイリング必要？？）
+.p-introduction--collection,
+.wp-block-gallery {
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));

@@ -34,7 +34,7 @@ function add_files(){
 }
 add_action('wp_enqueue_scripts', 'add_files');
 
-//複数のウィジェット機能追加。 カスタムメニューで実装したので不要かも？
+//複数のウィジェット機能追加。 
 function wpbeg_widgets_init() {
     register_sidebar (
         array(
@@ -73,9 +73,32 @@ function wpbeg_widgets_init() {
 }
 add_action( 'widgets_init', 'wpbeg_widgets_init' );
 
-//ビジュアルエディタにCSSを設定する
-add_editor_style('editor-style.css');
-function HamburgerSite_theme_add_editor_styles() {
-    add_editor_style( get_template_directory_uri() . "/css/editor-style.css" );
-}
-add_action( 'admin_init', 'HamburgerSite_theme_add_editor_styles' );
+//ビジュアルエディタにCSSを設定する（今回は実装しない）
+// function my_setup_theme() {
+// 	add_theme_support( 'editor-styles' );
+// }
+// add_action( 'after_setup_theme', 'my_setup_theme' );
+
+// function HamburgerSite_theme_add_editor_styles() {
+//     add_editor_style( get_template_directory_uri() . "/css/common.css" );
+// }
+// add_action( 'admin_init', 'HamburgerSite_theme_add_editor_styles' );
+
+
+//フィードの設定
+add_theme_support( 'automatic-feed-links' );
+
+//固定ページをサイト内検索から除外する。（検索を投稿に限定する）
+function search_pre_get_posts( $query ) {
+    //管理画面、メインクエリー以外では何もしない
+    if ( is_admin() || ! $query->is_main_query() ) {
+    return;
+    }
+    //サイト内検索でのみ動作
+    else if ( $query->is_search ){
+    //固定ページをサイト内検索から除外
+    $query->set( 'post_type', 'post' );
+    }
+    return $query;
+    }
+    add_action( 'pre_get_posts', 'search_pre_get_posts' );

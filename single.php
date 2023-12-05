@@ -10,7 +10,7 @@
         <div class="l-main--visual">
           <!-- アイキャッチ画像を設定した場合、p-single-visualのdivタグがつく。 -->
           <?php if(has_post_thumbnail()) : ?>
-            <div class="p-single-visual">
+            <div class="p-title-visual">
               <?php the_post_thumbnail(); ?>
               <?php endif ; ?> 
           <h2 class="c-main-font-visual wrapper"><?php single_post_title(); ?></h2>

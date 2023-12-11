@@ -425,6 +425,27 @@ h6.wp-block-heading {
   }
 }
 
+.p-archive-menu__text p > a {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  width: 163px;
+  padding: 15px 40px;
+  margin-top: 70px;
+  background-color: #ffffff;
+  border: #707070;
+  border-radius: 30px;
+  color: #707070;
+  cursor: pointer;
+}
+@media (min-width: 1000px) {
+  .p-archive-menu__text p > a {
+    width: 250px;
+    padding: 25px 40px;
+    border-radius: 40px;
+  }
+}
+
 .wp-block-button__link {
   display: inline-block;
   background-color: #f2ede9;
@@ -1247,7 +1268,7 @@ ul, ol {
 .wp-block-quote,
 .wp-block-code,
 .wp-block-button__link {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
   }
 }
 

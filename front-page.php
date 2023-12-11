@@ -13,7 +13,10 @@
         <div class="l-container--front wrapper">
           <section class="p-section--TakeOut">
             <div class="p-section__title">
-              <h2 class="p-section__title-font">Take Out</h2>
+              <h2 class="p-section__title-font">
+                <a href="<?php echo esc_url( get_category_link(get_cat_ID('Take Out')) ); ?>">
+                Take Out
+                </a></h2>
               <div class="p-section__border"></div>
             </div>
             <div class="p-section__box">
@@ -34,7 +37,9 @@
           </section>
           <section class="p-section--EatIn">
             <div class="p-section__title">
-              <h2 class="p-section__title-font">Eat In</h2>
+              <h2 class="p-section__title-font">
+              <a href="<?php echo esc_url( get_category_link(get_cat_ID('Eat In')) ); ?>">
+              Eat In</a></h2>
               <div class="p-section__border"></div>
             </div>
             <div class="p-section__box">

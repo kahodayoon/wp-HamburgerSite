@@ -12,6 +12,14 @@
   <div id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
   <h2 class="p-archive-menu__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
   <div class="p-archive-menu__text">
-  <?php the_content('詳しく見る'); ?>
+
+  <?php if ($pos=strpos($post->post_content, '<!--more-->')): ?>
+  <!-- Moreを入れてある投稿の時に表示 -->
+  <?php the_content('詳しく見る');?>
+  <?php else : ?>
+  <!-- Moreを入れてない投稿の時に表示 -->
+  <?php the_excerpt();  ?>
+  <?php endif; ?>
+    
   </div>
 </section>

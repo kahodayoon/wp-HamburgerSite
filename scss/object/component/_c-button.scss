@@ -26,6 +26,27 @@
     border-radius: 40px;
   }
 }
+//the_excerptを使った時の「詳しく見る」のボタン
+.p-archive-menu__text {
+  p > a {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    width: 163px;
+    padding: 15px 40px;
+    margin-top: 70px;
+    background-color: #ffffff;
+    border: #707070;
+    border-radius: 30px;
+    color: #707070;
+    cursor: pointer;
+    @include pc {
+      width: 250px;
+      padding: 25px 40px;
+      border-radius: 40px;
+    }
+  }
+}
 //シングルページとショップページの下部のボタン
 .wp-block-button__link {
   // @extend .c-button;

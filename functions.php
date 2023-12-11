@@ -103,3 +103,16 @@ function search_pre_get_posts( $query ) {
     return $query;
     }
     add_action( 'pre_get_posts', 'search_pre_get_posts' );
+
+
+//アーカイブページの「詳しく見る」の表示設定 the_excerptの設定。プラグイン「WP Multibyte Patch」をインストール済み。  
+//moreタグを入れなくてもarchive.phpの抜粋のみ表示させる。
+function new_excerpt_more($post) {
+    return '<a href="'. get_permalink() . '">' . '詳しく見る' . '</a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
+//抜粋する文字数を変更。
+function new_excerpt_mblength($length) {
+    return 55;
+}
+add_filter('excerpt_mblength', 'new_excerpt_mblength');

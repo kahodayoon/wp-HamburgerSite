@@ -5,10 +5,23 @@
         <?php get_sidebar(); ?>
         </div>
         <div class="l-left-side">
-            <?php get_header('search'); ?>   
+            <?php get_header('search'); ?> 
+            <div class="l-main p-archive-visual">
+              <div class="l-main p-archive-visual__layer">
+                <div class="p-archive-visual__text wrapper">
+                  <h2 class="c-main-font--archive-large">Search:</h2>
+                  <p class="c-main-font--archive-small"><?php the_search_query(); ?></p>
+                </div>
+              </div>
+            </div>  
             <div class="l-container wrapper">
-            <h1><?php the_search_query(); ?> の検索結果</h1>
-
+            <div class="p-archive-section--main">
+            <h2 class="c-title-font">小見出しが入ります</h2>
+            <p class="c-main-text">
+              テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+            </p>
+          </div>
+          <div>
             <?php
             if (have_posts() && get_search_query()) : 
                 while (have_posts()) :
@@ -29,7 +42,7 @@
       </div>
       <!--l-left-sideのdiv-->
     </div>
-
+    </div>
     <!--l-main-contentsのdiv-->
     <?php get_footer(); ?>
 

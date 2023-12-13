@@ -32,7 +32,9 @@
 // .c-tabletpage-arrow--next,
 .pages,
 .nextpostslink,
-.previouspostslink {
+.previouspostslink,
+.last,
+.first   {
   display: none;
   @include tab {
     display: block;

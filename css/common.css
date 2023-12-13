@@ -315,13 +315,17 @@ li {
 
 .pages,
 .nextpostslink,
-.previouspostslink {
+.previouspostslink,
+.last,
+.first {
   display: none;
 }
 @media (min-width: 650px) {
   .pages,
 .nextpostslink,
-.previouspostslink {
+.previouspostslink,
+.last,
+.first {
     display: block;
     padding: 8px 0;
     line-height: 1.6rem;
@@ -1311,11 +1315,6 @@ ul, ol {
           animation-duration: 0.5s;
   -webkit-animation-name: fade-out;
           animation-name: fade-out;
-}
-@media (min-width: 1000px) {
-  .js-foodmenu--background {
-    display: none;
-  }
 }
 
 @-webkit-keyframes fade-out {

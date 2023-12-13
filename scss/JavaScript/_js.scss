@@ -9,9 +9,6 @@
   height: 100%;
   animation-duration: 0.5s;
   animation-name: fade-out;
-  // @include pc {
-  //   display: none;
-  // }
 }
 @keyframes fade-out {
   0% {
@@ -31,6 +28,7 @@
   visibility: visible;
   animation-duration: 0.5s;
   animation-name: fade-in;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 @keyframes fade-in {
   0% {

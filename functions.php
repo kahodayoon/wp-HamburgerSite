@@ -31,7 +31,7 @@ function add_files(){
     //メインのCSSファイル
     wp_enqueue_style('my_style',DIRE.'/css/common.css',array(), '1.0.0' );
     //JavaScriptファイル
-    wp_enqueue_script('my_script',DIRE.'/script.js',array( 'jquery' ), '1.0.0' ,false);
+    wp_enqueue_script('my_script',DIRE.'/script.js',array( 'jquery' ), '1.0.0' ,true);
 }
 add_action('wp_enqueue_scripts', 'add_files');
 

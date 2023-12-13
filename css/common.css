@@ -1017,10 +1017,6 @@ h6.wp-block-heading {
   line-height: 30px;
 }
 
-.p-foodmenu--background {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
 .p-foodmenu-title--sp {
   position: absolute;
   top: 2.2%;
@@ -1352,6 +1348,7 @@ ul, ol {
           animation-duration: 0.5s;
   -webkit-animation-name: fade-in;
           animation-name: fade-in;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 @-webkit-keyframes fade-in {

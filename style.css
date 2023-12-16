@@ -2,11 +2,15 @@
 Theme Name: wp-HamburgerSite
 Description: 最終課題用テーマ
 Version: 1.0.0
-Theme URI:  //テーマのURL
+Theme URI: https://github.com/kahodayoon/wp-HamburgerSite.git
 Author: Kaho
-Author URI:  //作った人の URL
-Tags: right-sidebar, blog //テーマのタイプ
+Author URI: https://wp.kaho.com
+Tags: right-sidebar, blog 
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Text Domain: HamburgerSite //テキストドメイン
+Text Domain: wp-HamburgerSite
+Tested up to: 6.4
+Requires PHP: 8.1
+wp-hamburgersite WordPress Theme, (C) 2020 WordPress.org
+wp-hamburgersite is distributed under the terms of the GNU GPL.
 */

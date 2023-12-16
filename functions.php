@@ -1,6 +1,7 @@
 <?php
     add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
-    add_theme_support( 'menus' ); 
+    register_nav_menus();
+    //add_theme_support( 'menus' ); 
     add_theme_support( 'title-tag' );
     add_theme_support( 'post-thumbnails' ); 
 
@@ -27,7 +28,7 @@ function add_files(){
     wp_enqueue_style('my_font2','https://fonts.gstatic.com',array(), '1.0.0' );
     wp_enqueue_style('my_font2','https://fonts.googleapis.com/css2?family=M+PLUS+1&family=Roboto&display=swap',array(), '1.0.0' );
     //FontAwesome
-    wp_enqueue_script('fontawesome_script', 'https://kit.fontawesome.com/92cec73944.js'); 
+    wp_enqueue_script('fontawesome_script', 'https://kit.fontawesome.com/92cec73944.js' , '6'); 
     //メインのCSSファイル
     wp_enqueue_style('my_style',DIRE.'/css/common.css',array(), '1.0.0' );
     //JavaScriptファイル

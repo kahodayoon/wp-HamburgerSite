@@ -19,7 +19,7 @@
 //   }
 // }
 // .c-tabletpage-number--first,
-.current {
+.current{
   @include tab {
     color: #ffffff;
     background-color: #3c2b1c;
@@ -46,11 +46,16 @@
 .previouspostslink {
   font-size: 2rem;
 }
-// .c-tabletpage-arrow--next {
-//   @include pc {
-//     display: none;
-//   }
-// }
-// .c-tabletpage-text {
-//   padding-right: 5px;
-// }
+
+//シングルページの投稿が長い時のページ分割
+.post-pages {
+ text-align: center;
+ padding: 20px;
+}
+.post-page-numbers {
+  padding: 5px 7px;
+}
+.post-page-numbers.current {
+  color: #ffffff;
+  background-color: #3c2b1c;
+}

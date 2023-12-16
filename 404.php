@@ -13,7 +13,7 @@
       <span class="error_msg">
       http://<?php echo esc_html($_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI']); ?>
       </span></p>
-      <p class="c-button__home"><a href="<?php echo home_url(); ?>">HOME</a></p>
+      <p class="c-button__home"><a href="<?php echo esc_url(home_url()); ?>">HOME</a></p>
       </div>
       </div>
       <!--l-left-sideのdiv-->

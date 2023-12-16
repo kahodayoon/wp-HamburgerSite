@@ -28,6 +28,11 @@
               <div id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
                 <?php the_content(); ?>
               </div>
+              <?php   wp_link_pages( array(
+                'before'    => '<div class="post-pages">ページ：',
+                'after'     => '</div>',
+                'separator' => ' &bull; ',
+              ) );  ?>
               <?php endwhile; else :?>
               <p>表示する記事がありません</p>
               <?php endif;?>

@@ -68,7 +68,8 @@ li {
   }
 }
 
-.l-container, .l-container--front {
+.l-container,
+.l-container--front {
   padding-top: 20px;
   padding-bottom: 49px;
 }
@@ -288,7 +289,7 @@ li {
 }
 @media (min-width: 650px) {
   .c-iphonepage-previous,
-.c-iphonepage-next {
+  .c-iphonepage-next {
     display: none;
   }
 }
@@ -299,7 +300,7 @@ li {
 }
 @media (min-width: 650px) {
   .wp-pagenavi .current,
-.wp-pagenavi .page {
+  .wp-pagenavi .page {
     display: block;
     border: solid 1px #707070;
     padding: 8px 12.5px;
@@ -322,10 +323,10 @@ li {
 }
 @media (min-width: 650px) {
   .pages,
-.nextpostslink,
-.previouspostslink,
-.last,
-.first {
+  .nextpostslink,
+  .previouspostslink,
+  .last,
+  .first {
     display: block;
     padding: 8px 0;
     line-height: 1.6rem;
@@ -373,7 +374,11 @@ li {
   }
 }
 
-.c-title-sub, h6.wp-block-heading, h5.wp-block-heading, h4.wp-block-heading, h3.wp-block-heading {
+.c-title-sub,
+h6.wp-block-heading,
+h5.wp-block-heading,
+h4.wp-block-heading,
+h3.wp-block-heading {
   font-weight: bold;
   font-family: "M PLUS 1", sans-serif;
 }
@@ -436,7 +441,7 @@ h6.wp-block-heading {
 }
 @media (min-width: 1000px) {
   .c-button--archive,
-.more-link {
+  .more-link {
     width: 250px;
     padding: 25px 40px;
     border-radius: 40px;
@@ -506,8 +511,8 @@ h6.wp-block-heading {
   }
 }
 .wp-block-quote a {
-  border-bottom: 1px solid #4A6C9B;
-  color: #4A6C9B;
+  border-bottom: 1px solid #4a6c9b;
+  color: #4a6c9b;
 }
 @media (min-width: 650px) {
   .wp-block-quote p + p {
@@ -519,9 +524,9 @@ h6.wp-block-heading {
   width: 100%;
   height: 124px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   -o-object-position: center bottom;
-     object-position: center bottom;
+  object-position: center bottom;
 }
 @media (min-width: 650px) {
   .c-image--wide {
@@ -537,7 +542,7 @@ h6.wp-block-heading {
 .c-image--small {
   width: 42%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 @media (min-width: 1000px) {
   .c-image--small {
@@ -550,7 +555,7 @@ h6.wp-block-heading {
   margin: 0 auto;
   width: 80%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 @media (min-width: 1000px) {
   .c-image--normal {
@@ -561,7 +566,7 @@ h6.wp-block-heading {
 .c-image--collection {
   width: 100%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .c-code,
@@ -580,14 +585,16 @@ h6.wp-block-heading {
 }
 
 .c-table__td1,
-.wp-block-table td, .wp-block-table th {
+.wp-block-table td,
+.wp-block-table th {
   border: 1px solid #707070;
   padding: 30px 0 30px 30px;
   width: 46%;
 }
 @media (min-width: 650px) {
   .c-table__td1,
-.wp-block-table td, .wp-block-table th {
+  .wp-block-table td,
+  .wp-block-table th {
     width: 30%;
   }
 }
@@ -737,7 +744,8 @@ h6.wp-block-heading {
   gap: 25px;
 }
 
-.p-archive-menu > a, .p-archive-menu--product1 > a,
+.p-archive-menu > a,
+.p-archive-menu--product1 > a,
 .p-archive-menu--product2 > a,
 .p-archive-menu--product3 > a,
 .p-archive-menu--product4 > a,
@@ -751,11 +759,11 @@ h6.wp-block-heading {
   display: block;
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 @media (min-width: 650px) {
   .p-archive-menu__image,
-.wp-post-image {
+  .wp-post-image {
     height: 100%;
   }
 }
@@ -767,18 +775,18 @@ h6.wp-block-heading {
 .p-archive-menu--product3 > .type-post,
 .p-archive-menu--product4 > .type-post,
 .p-archive-menu--product5 > .type-post {
-  background-color: #3C2B1C;
+  background-color: #3c2b1c;
   color: #ffffff;
   padding: 40px 5%;
 }
 @media (min-width: 650px) {
   .p-archive-menu__textbox,
-.p-archive-menu > .type-post,
-.p-archive-menu--product1 > .type-post,
-.p-archive-menu--product2 > .type-post,
-.p-archive-menu--product3 > .type-post,
-.p-archive-menu--product4 > .type-post,
-.p-archive-menu--product5 > .type-post {
+  .p-archive-menu > .type-post,
+  .p-archive-menu--product1 > .type-post,
+  .p-archive-menu--product2 > .type-post,
+  .p-archive-menu--product3 > .type-post,
+  .p-archive-menu--product4 > .type-post,
+  .p-archive-menu--product5 > .type-post {
     flex-basis: 50%;
     flex-shrink: 0;
   }
@@ -804,7 +812,7 @@ h6.wp-block-heading {
 }
 @media (min-width: 1000px) {
   .p-archive-menu__sub-title,
-.p-archive-menu__text > h2 {
+  .p-archive-menu__text > h2 {
     font-size: 2.4rem;
   }
 }
@@ -819,7 +827,8 @@ h6.wp-block-heading {
   }
 }
 
-.p-archive-menu, .p-archive-menu--product1,
+.p-archive-menu,
+.p-archive-menu--product1,
 .p-archive-menu--product2,
 .p-archive-menu--product3,
 .p-archive-menu--product4,
@@ -827,21 +836,25 @@ h6.wp-block-heading {
   width: 100%;
 }
 @media (min-width: 650px) {
-  .p-archive-menu, .p-archive-menu--product1,
-.p-archive-menu--product2,
-.p-archive-menu--product3,
-.p-archive-menu--product4,
-.p-archive-menu--product5 {
+  .p-archive-menu,
+  .p-archive-menu--product1,
+  .p-archive-menu--product2,
+  .p-archive-menu--product3,
+  .p-archive-menu--product4,
+  .p-archive-menu--product5 {
     display: flex;
     flex-direction: row;
   }
 }
 
-.p-archive-menu + .p-archive-menu, .p-archive-menu--product1 + .p-archive-menu,
+.p-archive-menu + .p-archive-menu,
+.p-archive-menu--product1 + .p-archive-menu,
 .p-archive-menu--product2 + .p-archive-menu,
 .p-archive-menu--product3 + .p-archive-menu,
 .p-archive-menu--product4 + .p-archive-menu,
-.p-archive-menu--product5 + .p-archive-menu, .p-archive-menu + .p-archive-menu--product1, .p-archive-menu--product1 + .p-archive-menu--product1,
+.p-archive-menu--product5 + .p-archive-menu,
+.p-archive-menu + .p-archive-menu--product1,
+.p-archive-menu--product1 + .p-archive-menu--product1,
 .p-archive-menu--product2 + .p-archive-menu--product1,
 .p-archive-menu--product3 + .p-archive-menu--product1,
 .p-archive-menu--product4 + .p-archive-menu--product1,
@@ -873,7 +886,8 @@ h6.wp-block-heading {
   margin-top: 5%;
 }
 
-.p-archive-menu > a, .p-archive-menu--product1 > a,
+.p-archive-menu > a,
+.p-archive-menu--product1 > a,
 .p-archive-menu--product2 > a,
 .p-archive-menu--product3 > a,
 .p-archive-menu--product4 > a,
@@ -881,7 +895,9 @@ h6.wp-block-heading {
   display: block;
 }
 
-.p-section, .p-section--EatIn, .p-section--TakeOut {
+.p-section,
+.p-section--EatIn,
+.p-section--TakeOut {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1086,7 +1102,7 @@ h6.wp-block-heading {
 }
 @media (min-width: 1000px) {
   .p-foodmenu__list1,
-.menu-item-has-children {
+  .menu-item-has-children {
     padding-top: 45px;
     padding-bottom: 0;
   }
@@ -1106,7 +1122,7 @@ h6.wp-block-heading {
 }
 @media (min-width: 1000px) {
   .p-foodmenu__list2:first-child,
-.sub-menu > .menu-item:first-child {
+  .sub-menu > .menu-item:first-child {
     margin-top: 30px;
   }
 }
@@ -1123,14 +1139,14 @@ h6.wp-block-heading {
 }
 @media (min-width: 650px) {
   .p-pagenavi,
-.wp-pagenavi {
+  .wp-pagenavi {
     justify-content: center;
     gap: 2%;
   }
 }
 
 .wp-pagenavi a:hover {
-  color: #FFF;
+  color: #fff;
   background-color: #999;
   border-color: #999;
 }
@@ -1182,7 +1198,9 @@ h6.wp-block-heading {
   padding-top: 30px;
 }
 
-.p-introduction__product, .p-introduction__product2, .p-introduction__product1 {
+.p-introduction__product,
+.p-introduction__product2,
+.p-introduction__product1 {
   display: flex;
   padding-top: 30px;
   align-items: flex-start;
@@ -1201,13 +1219,13 @@ h6.wp-block-heading {
 }
 @media (min-width: 650px) {
   .p-introduction--collection,
-.wp-block-gallery {
+  .wp-block-gallery {
     margin-top: 240px;
   }
 }
 @media (min-width: 1000px) {
   .p-introduction--collection,
-.wp-block-gallery {
+  .wp-block-gallery {
     margin-top: 0;
   }
 }
@@ -1242,7 +1260,8 @@ li > ul {
   padding: 12px 0 12px 18px;
 }
 
-ul, ol {
+ul,
+ol {
   padding: 12px 0;
 }
 
@@ -1278,10 +1297,10 @@ ul, ol {
 }
 @media (min-width: 650px) {
   .u-mb,
-.wp-block-heading,
-.wp-block-quote,
-.wp-block-code,
-.wp-block-button__link {
+  .wp-block-heading,
+  .wp-block-quote,
+  .wp-block-code,
+  .wp-block-button__link {
     margin-bottom: 50px;
   }
 }
@@ -1322,9 +1341,9 @@ ul, ol {
   width: 100%;
   height: 100%;
   -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
+  animation-duration: 0.5s;
   -webkit-animation-name: fade-out;
-          animation-name: fade-out;
+  animation-name: fade-out;
 }
 
 @-webkit-keyframes fade-out {
@@ -1359,9 +1378,9 @@ ul, ol {
 .js-foodmenu--background.is-open {
   visibility: visible;
   -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
+  animation-duration: 0.5s;
   -webkit-animation-name: fade-in;
-          animation-name: fade-in;
+  animation-name: fade-in;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -1421,3 +1440,4 @@ ul, ol {
   overflow: hidden;
 }
 /*# sourceMappingURL=common.css.map */
+

@@ -1,9 +1,10 @@
 <?php
     add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
-    register_nav_menus();
-    //add_theme_support( 'menus' ); 
     add_theme_support( 'title-tag' );
     add_theme_support( 'post-thumbnails' ); 
+    register_nav_menus( array(
+        'sidebar-menu' => 'SidebarMenu',
+      ));
 
     //タイトル出力
     function HamburgerSite_title( $title ) {
@@ -117,3 +118,11 @@ function new_excerpt_mblength($length) {
     return 55;
 }
 add_filter('excerpt_mblength', 'new_excerpt_mblength');
+
+//テーマチェックによる追加
+add_theme_support( 'wp-block-styles' );
+add_theme_support( "responsive-embeds" );
+add_theme_support( "align-wide" ) ;
+add_theme_support( "custom-logo") ;
+add_theme_support( "custom-header") ;
+add_theme_support( "custom-background") ;

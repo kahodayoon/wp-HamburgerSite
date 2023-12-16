@@ -4,6 +4,6 @@
             <span class="c-menu--close__bar"></span>
             <span class="c-menu--close__bar"></span>
           </button>
-          <?php wp_nav_menu(); ?>
+          <?php wp_nav_menu( array( 'theme_location' => 'sidebar-menu' ) )?>
         </nav>
         <div class="p-foodmenu--background js-foodmenu--background"></div>

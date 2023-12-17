@@ -1,7 +1,7 @@
 <?php
     add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
     add_theme_support( 'title-tag' );
-    add_theme_support( 'post-thumbnails' ); 
+    add_theme_support('post-thumbnails');
     register_nav_menus( array(
         'sidebar-menu' => 'SidebarMenu',
       ));
@@ -126,3 +126,17 @@ add_theme_support( "align-wide" ) ;
 add_theme_support( "custom-logo") ;
 add_theme_support( "custom-header") ;
 add_theme_support( "custom-background") ;
+
+//投稿画面に独自のブロックスタイルを追加
+register_block_style(
+	'core/paragraph',
+	array(
+		'name'  => 'box-pink',
+		'label' => 'ボックス（ピンク）',
+		'inline_style' => '.is-style-box-pink{
+			background: #ffc0cb;
+			border: 1px solid #ff00ff;
+			padding: 1em;
+		}',
+	)
+);

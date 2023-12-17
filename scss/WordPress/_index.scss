@@ -1,0 +1,12 @@
+//WordPressディレクトリに追加したscssファイルを追記
+@use "screen-reader-text";
+@use "more-link";
+@use "wp-block-button";
+@use "wp-block-code";
+@use "wp-block-page-list";
+@use "wp-block-quote";
+@use "wp-block-media-text";
+@use "wp-block-table";
+@use "wp-pagenavi";
+@use "post-pages";
+@use "wp-block-heading";

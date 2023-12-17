@@ -44,8 +44,7 @@
 }
 
 //商品の写真一覧(ギャラリーのスタイリング必要？？）
-.p-introduction--collection,
-.wp-block-gallery {
+.p-introduction--collection {
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -55,4 +54,8 @@
   @include pc {
     margin-top: 0;
   }
+}
+// .wp-block-gallery↑のスタイリング当てていたけどいる？？
+.wp-block-gallery > .wp-block-image {
+  padding-bottom: 0;
 }

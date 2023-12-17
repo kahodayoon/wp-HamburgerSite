@@ -1,0 +1,39 @@
+@use "../foundation/base" as *;
+//ページ番号
+.wp-pagenavi {
+  .current,
+  .page {
+    display: none;
+    @include tab {
+      display: block;
+      border: solid 1px #707070;
+      padding: 8px 12.5px;
+    }
+  }
+}
+
+.current{
+  @include tab {
+    color: #ffffff;
+    background-color: #3c2b1c;
+  }
+}
+
+//矢印
+.pages,
+.nextpostslink,
+.previouspostslink,
+.last,
+.first   {
+  display: none;
+  @include tab {
+    display: block;
+    padding: 8px 0;
+    line-height: 1.6rem;
+  }
+}
+.nextpostslink,
+.previouspostslink {
+  font-size: 2rem;
+}
+

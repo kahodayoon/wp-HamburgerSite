@@ -1,7 +1,6 @@
 @use "../../foundation/base" as *;
 .u-mb,
 .wp-block-heading,
-.wp-block-quote,
 .wp-block-code,
 .wp-block-button__link {
   margin-bottom: 30px;
@@ -26,7 +25,9 @@
 .wp-block-table {
   margin-bottom: 40px;
 }
-.wp-block-image {
+.wp-block-image,
+.wp-block-gallery,
+.wp-block-quote {
   padding-bottom: 10px;
   @include tab {
     padding-bottom: 30px;

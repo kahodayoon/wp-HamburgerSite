@@ -7,15 +7,3 @@
     height: 170px;
   }
 }
-
-.search-no-results, {
-  position: relative;
-  .l-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    @include pc {
-      position: inherit;
-    }
-  }
-}

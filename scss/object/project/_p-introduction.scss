@@ -14,34 +14,24 @@
 
 //シングルページの最初のテキストの上に余白をつける。（WordPressで使用）
 .p-introduction {
-  // .type-post p:first-child,
   .type-post .wp-block-heading:first-child {
     @include tab {
       padding-top: 40px;
     }
   }
-}
-
-.p-introduction--product {
-  padding-bottom: 30px;
-  .c-image--normal {
-    padding-top: 30px;
+  //シングルページのh2にwp-block-headingのクラス名がついたりつかなかったりする？
+  //クラス名が付与されなかった場合のスタイリング↓
+  h2 {
+  font-size: 2.8rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+    @include tab {
+  font-size: 3.6rem;
+  margin-bottom: 50px;
+    }
   }
 }
-//商品の写真と説明
-.p-introduction__product {
-  display: flex;
-  padding-top: 30px;
-  align-items: flex-start;
-  gap: 3%;
-}
-.p-introduction__product1 {
-  @extend .p-introduction__product;
-}
-.p-introduction__product2 {
-  @extend .p-introduction__product;
-  flex-direction: row-reverse;
-}
+
 
 //商品の写真一覧(ギャラリーのスタイリング必要？？）
 .p-introduction--collection {
@@ -56,6 +46,3 @@
   }
 }
 // .wp-block-gallery↑のスタイリング当てていたけどいる？？
-.wp-block-gallery > .wp-block-image {
-  padding-bottom: 0;
-}

@@ -19,16 +19,7 @@
     height: 100%;
   }
 }
-//シングルページのメインの写真
-.attachment-post-thumbnail.wp-post-image{
-  display: block;
-  width: 100%;
-  object-fit: cover;
-  height: 205px;
-  @include tab {
-    height: 500px;
-  }
-}
+
 
 //茶色いメニュー全体
 .p-archive-menu__textbox,
@@ -54,10 +45,12 @@
 }
 
 .p-archive-menu__sub-title,
-.p-archive-menu__text > h2 {
+.p-archive-menu__text > h2,
+.p-archive-menu__text > h2.wp-block-heading {
   font-size: 1.6rem;
   font-family: $font-jp;
   font-weight: bold;
+  margin-bottom: 20px;
   @include pc {
     font-size: 2.4rem;
   }
@@ -108,11 +101,3 @@
   }
 }
 
-//アーカイブメニューのsearchページ
-.p-archive-menu--product1,
-.p-archive-menu--product2,
-.p-archive-menu--product3,
-.p-archive-menu--product4,
-.p-archive-menu--product5 {
-  @extend .p-archive-menu;
-}

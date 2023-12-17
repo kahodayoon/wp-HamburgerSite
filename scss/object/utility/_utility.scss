@@ -33,3 +33,7 @@
     padding-bottom: 30px;
   }
 }
+//ギャラリーの中の画像は余白不要。
+.wp-block-gallery > .wp-block-image {
+  padding-bottom: 0;
+}

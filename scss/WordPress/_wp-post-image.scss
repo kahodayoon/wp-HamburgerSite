@@ -1,0 +1,11 @@
+@use "../foundation/base" as *;
+//シングルページのメインの写真
+.attachment-post-thumbnail.wp-post-image{
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  height: 205px;
+  @include tab {
+    height: 500px;
+  }
+}

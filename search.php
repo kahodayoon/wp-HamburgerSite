@@ -31,6 +31,7 @@
             <p>検索キーワードに該当する記事がありませんでした。</p>
             <?php endif;?>
           </div>
+          </div>
         <?php if ( $wp_query -> max_num_pages > 1 ) : //ページ数が1を超える場合に処理 ?>
           <div class="p-pagenavi wrapper">
             <!-- //class="p-pagenavi wrapper" -->
@@ -39,7 +40,6 @@
           </div>
         <?php endif; ?>
         <?php wp_pagenavi(); ?>
-      </div>
       <!--l-left-sideのdiv-->
     </div>
     </div>

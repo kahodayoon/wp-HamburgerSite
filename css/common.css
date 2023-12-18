@@ -140,6 +140,11 @@ li {
     font-size: 3.4rem;
   }
 }
+@media (min-width: 1000px) {
+  .c-menu {
+    cursor: inherit;
+  }
+}
 
 .c-menu--close {
   display: block;
@@ -705,24 +710,16 @@ li {
   }
 }
 
-.p-pagenavi,
-.wp-pagenavi {
+.p-pagenavi {
   display: flex;
   justify-content: space-between;
   padding-bottom: 20px;
 }
 @media (min-width: 650px) {
-  .p-pagenavi,
-.wp-pagenavi {
+  .p-pagenavi {
     justify-content: center;
     gap: 2%;
   }
-}
-
-.wp-pagenavi a:hover {
-  color: #FFF;
-  background-color: #999;
-  border-color: #999;
 }
 
 .p-title-visual {
@@ -806,29 +803,6 @@ li {
 .l-container ul,
 .l-container ol {
   padding: 12px 0;
-}
-
-.p-page-visual {
-  background-image: url(../img/black-steel-lamp-post.jpg);
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-@media (min-width: 650px) {
-  .p-page-visual {
-    background-image: url(../img/black-steel-lamp-post-tab.jpg);
-    height: 500px;
-  }
-}
-@media (min-width: 1000px) {
-  .p-page-visual {
-    background-image: url(../img/black-steel-lamp-post-pc.jpg);
-  }
-}
-.p-page-visual .c-main-font-visual {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 .u-mb,
@@ -1130,6 +1104,24 @@ li {
   .wp-block-table td, .wp-block-table th {
     width: 30%;
   }
+}
+
+.wp-pagenavi {
+  display: none;
+}
+@media (min-width: 650px) {
+  .wp-pagenavi {
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    padding-bottom: 20px;
+  }
+}
+
+.wp-pagenavi a:hover {
+  color: #FFF;
+  background-color: #999;
+  border-color: #999;
 }
 
 .wp-pagenavi .current,

@@ -7,6 +7,9 @@
   @include tab {
     font-size: 3.4rem;
   }
+  @include pc {
+    cursor: inherit;
+  }
 }
 
 .c-menu--close {

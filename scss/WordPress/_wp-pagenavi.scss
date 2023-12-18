@@ -1,4 +1,19 @@
 @use "../foundation/base" as *;
+.wp-pagenavi {
+  display: none;
+  @include tab {
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    padding-bottom: 20px;
+  }
+}
+.wp-pagenavi a:hover{
+  color:#FFF; 
+  background-color:#999; 
+  border-color:#999;
+  }
+
 //ページ番号
 .wp-pagenavi {
   .current,

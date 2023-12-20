@@ -1,6 +1,7 @@
 <?php get_header(); //header.phpに切り取り。 ?>  
   <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
+  <div class="wrap">
     <div class="l-main-contents">
       <div class="l-right-side">
       <?php get_sidebar(); ?>

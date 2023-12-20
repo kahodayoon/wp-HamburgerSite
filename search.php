@@ -1,5 +1,6 @@
 <?php get_header(); ?> 
   <body <?php body_class(); ?> class="js-body">
+  <div class="wrap">
     <div class="l-main-contents">
       <div class="l-right-side">
         <?php get_sidebar(); ?>
@@ -22,14 +23,15 @@
             </p>
           </div>
           <div>
+            <!-- 条件分岐にisset($_GET['s']) && empty($_GET['s'])を加えて、何も入力せず検索したときも全件表示させている。 -->
             <?php
-            if (have_posts() && get_search_query()) : 
+            if (have_posts() && get_search_query() || isset($_GET['s']) && empty($_GET['s'])) : 
                 while (have_posts()) :
                 the_post(); ?>
                 <?php get_template_part('template-parts/archive','content'); ?>
             <?php endwhile; else :?>
             <p>検索キーワードに該当する記事がありませんでした。</p>
-            <?php endif;?>
+            <?php endif; ?>
           </div>
           </div>
         <?php if ( $wp_query -> max_num_pages > 1 ) : //ページ数が1を超える場合に処理 ?>

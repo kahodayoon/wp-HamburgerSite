@@ -11,7 +11,7 @@ $tab: 650px; //Figmaのサイズは834px
     @content;
   }
 }
-$pc: 1000px; //Figmaのサイズは1920px
+$pc: 1150px; //Figmaのサイズは1920px
 @mixin pc {
   @media (min-width: ($pc)) {
     @content;

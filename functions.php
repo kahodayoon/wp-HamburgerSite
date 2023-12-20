@@ -25,8 +25,8 @@ function add_files(){
     //リセットCSS
     wp_enqueue_style('reset_style','https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css');
     //Googleフォント
-    wp_enqueue_style('my_font1','https://fonts.googleapis.com',array(), '1.0.0' );
-    wp_enqueue_style('my_font2','https://fonts.gstatic.com',array(), '1.0.0' );
+    // wp_enqueue_style('my_font1','https://fonts.googleapis.com',array(), '1.0.0' );
+    // wp_enqueue_style('my_font2','https://fonts.gstatic.com',array(), '1.0.0' );
     wp_enqueue_style('my_font2','https://fonts.googleapis.com/css2?family=M+PLUS+1&family=Roboto&display=swap',array(), '1.0.0' );
     //FontAwesome
     wp_enqueue_script('fontawesome_script', 'https://kit.fontawesome.com/92cec73944.js' , '6'); 
@@ -105,6 +105,8 @@ function search_pre_get_posts( $query ) {
     return $query;
     }
     add_action( 'pre_get_posts', 'search_pre_get_posts' );
+
+
 
 
 //アーカイブページの「詳しく見る」の表示設定 the_excerptの設定。プラグイン「WP Multibyte Patch」をインストール済み。  

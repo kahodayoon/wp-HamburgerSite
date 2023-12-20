@@ -1,9 +1,16 @@
-@use '../foundation/base' as *;
+@use "../foundation/base" as *;
 .l-footer {
   height: 150px;
   background-image: url(../img/layer1.jpg);
-  // background-color: #9D8670;
+  width: 100%;
+  margin-top: auto;
   @include tab {
     height: 170px;
   }
+}
+
+.wrap{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }

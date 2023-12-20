@@ -14,5 +14,6 @@
       <!-- RaiseTech部分を変更した -->
     </footer>
     <?php wp_footer(); ?>
+  </div>
   </body>
 </html>
